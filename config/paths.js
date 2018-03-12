@@ -1,5 +1,5 @@
 const path = require('path');
-const srcDirectory = path.join(__dirname, '../');
+const srcDirectory = path.join(__dirname, '..');
 
 const paths = {
   configureStore: {
@@ -36,5 +36,12 @@ const fullPaths = Object.keys(paths).reduce((acc, cur) => {
   acc[cur].directory = `${srcDirectory}/templates/${acc[cur].filename}`;
   return acc;
 }, paths);
+
+const projectPath = srcDirectory.split('/');
+
+paths.project = {
+  filename: projectPath[projectPath.length - 1],
+  directory: srcDirectory
+};
 
 module.exports = fullPaths;

@@ -6,12 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "cli",
-    "command line",
-    "react",
-    "redux"
-  ],
+  "bin": {
+    "react-up": "./index.js"
+  },
+  "keywords": ["cli", "command line", "react", "redux"],
   "author": "Ian McPhail",
   "license": "ISC",
   "dependencies": {

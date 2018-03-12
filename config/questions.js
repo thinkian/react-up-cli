@@ -1,14 +1,12 @@
+const paths = require('./paths');
 const validators = require('../lib/validators');
-
-const directory = __dirname.split('/');
-const projectName = directory[directory.length - 1];
 
 const questions = [
   {
     type: 'input',
     name: 'name',
     message: 'Name your project',
-    default: projectName,
+    default: paths.project.filename,
     validate: validators.name
   },
   {
