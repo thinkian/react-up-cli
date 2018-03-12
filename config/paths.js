@@ -2,6 +2,9 @@ const path = require('path');
 const srcDirectory = path.join(__dirname, '../');
 
 const paths = {
+  configureStore: {
+    filename: 'configureStore.js'
+  },
   htmlTemplate: {
     filename: 'index.html'
   },
@@ -14,8 +17,14 @@ const paths = {
   reactWithRedux: {
     filename: 'reactWithRedux.js'
   },
+  reactWithReduxSaga: {
+    filename: 'reactWithReduxSaga.js'
+  },
   reducers: {
     filename: 'reducers.js'
+  },
+  sagas: {
+    filename: 'sagas.js'
   },
   webpack: {
     filename: 'webpack.config.js'
