@@ -1,3 +1,5 @@
+const validators = require('../lib/validators');
+
 const directory = __dirname.split('/');
 const projectName = directory[directory.length - 1];
 
@@ -6,25 +8,29 @@ const questions = [
     type: 'input',
     name: 'name',
     message: 'Name your project',
-    default: projectName
+    default: projectName,
+    validate: validators.name
   },
   {
     type: 'input',
     name: 'entry',
     message: 'Name your entry file',
-    default: 'index.js'
+    default: 'index.js',
+    validate: validators.jsFile
   },
   {
     type: 'input',
     name: 'srcDirectory',
     message: 'Name your source directory',
-    default: 'src'
+    default: 'src',
+    validate: validators.alphaOnly
   },
   {
     type: 'input',
     name: 'distDirectory',
     message: 'Name your distribution directory',
-    default: 'dist'
+    default: 'dist',
+    validate: validators.alphaOnly
   },
   {
     type: 'confirm',
@@ -37,7 +43,8 @@ const questions = [
     name: 'initialReducer',
     message: 'Name your initial reducer',
     when: answers => answers.redux,
-    default: 'application'
+    default: 'application',
+    validate: validators.alphaOnly
   },
   {
     type: 'confirm',
