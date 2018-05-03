@@ -9,9 +9,9 @@
   "bin": {
     "react-up": "./index.js"
   },
-  "keywords": ["cli", "command line", "react", "redux"],
+  "keywords": ["cli", "command line", "react", "redux", "jest"],
   "author": "Ian McPhail",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "inquirer": "^5.1.0",
     "jsonfile": "^4.0.0"
