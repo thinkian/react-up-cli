@@ -26,6 +26,9 @@ const paths = {
   sagas: {
     filename: 'sagas.js'
   },
+  test: {
+    filename: 'example.test.js'
+  },
   webpack: {
     filename: 'webpack.config.js'
   }
@@ -37,7 +40,8 @@ const fullPaths = Object.keys(paths).reduce((acc, cur) => {
   return acc;
 }, paths);
 
-const projectPath = srcDirectory.split('/');
+const currentDir = process.cwd();
+const projectPath = currentDir.split('/');
 
 paths.project = {
   filename: projectPath[projectPath.length - 1],
