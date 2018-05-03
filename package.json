@@ -1,5 +1,5 @@
 {
-  "name": "react-up",
+  "name": "react-up-cli",
   "version": "1.0.0",
   "description": "A command line tool for initializing React projects",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "bin": {
     "react-up": "./index.js"
   },
-  "keywords": ["cli", "command line", "react", "redux", "jest"],
+  "keywords": ["babel", "cli", "command line", "react", "redux", "jest", "webpack"],
   "author": "Ian McPhail",
   "license": "MIT",
   "dependencies": {
