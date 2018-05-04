@@ -42,10 +42,12 @@ const fullPaths = Object.keys(paths).reduce((acc, cur) => {
 
 const currentDir = process.cwd();
 const projectPath = currentDir.split('/');
+const projectDir = process.argv[2];
+const hasProjectDir = projectDir && projectDir.length;
 
 paths.project = {
   filename: projectPath[projectPath.length - 1],
-  directory: srcDirectory
+  directory: hasProjectDir ? `${currentDir}/${projectDir}` : ''
 };
 
 module.exports = fullPaths;
