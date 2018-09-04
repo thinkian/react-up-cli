@@ -54,6 +54,7 @@ module.exports = {
     })
   ],
   resolve: {
+    extensions: ['.js', '.jsx', '.json'],
     modules: [path.resolve('./$srcDirectory'), path.resolve('./node_modules')]
   },
   output: {
