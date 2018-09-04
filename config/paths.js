@@ -31,6 +31,9 @@ const paths = {
   },
   webpack: {
     filename: 'webpack.config.js'
+  },
+  webpackWithSass: {
+    filename: 'webpackWithSass.config.js'
   }
 };
 
@@ -46,7 +49,7 @@ const projectDir = process.argv[2];
 const hasProjectDir = projectDir && projectDir.length;
 
 paths.project = {
-  filename: projectPath[projectPath.length - 1],
+  filename: hasProjectDir ? projectDir : projectPath[projectPath.length - 1],
   directory: hasProjectDir ? `${currentDir}/${projectDir}` : ''
 };
 
