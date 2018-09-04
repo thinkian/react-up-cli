@@ -32,6 +32,12 @@ const questions = [
   },
   {
     type: 'confirm',
+    name: 'sass',
+    message: 'Would you like to use Sass?',
+    default: true
+  },
+  {
+    type: 'confirm',
     name: 'redux',
     message: 'Are you using Redux?',
     default: true

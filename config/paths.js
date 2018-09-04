@@ -31,6 +31,9 @@ const paths = {
   },
   webpack: {
     filename: 'webpack.config.js'
+  },
+  webpackWithSass: {
+    filename: 'webpackWithSass.config.js'
   }
 };
 
